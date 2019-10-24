@@ -1,0 +1,48 @@
+@import url('[https://fonts.googleapis.com/css?family=](https://www.google.com/url?q=https://fonts.googleapis.com/css?family%3DCabin%257COswald%26display%3Dswap&sa=D&ust=1563240325290000) [Cabin|Oswald](https://www.google.com/url?q=https://fonts.googleapis.com/css?family%3DCabin%257COswald%26display%3Dswap&sa=D&ust=1563240325291000) [&display=swap](https://www.google.com/url?q=https://fonts.googleapis.com/css?family%3DCabin%257COswald%26display%3Dswap&sa=D&ust=1563240325291000)');
+
+
+
+$base-color:rgb(43, 28, 46);
+$light-base-color: lighten($primary-color,33%);
+$b-radius: 6px;
+$shadow: 6px 6px 6px 6px rgba(0,0,0,.2);
+
+
+header{
+    font-family: 
+}
+
+.container{
+    display: grid;
+    grid-template: auto / repeat(4, 1fr);
+    border: 1px solid darken($base-color,20%);
+    text-shadow: 0 -1px 0 darken($base-color,10%);
+    grid-template-areas:
+    "nav nav nav ad"
+    "news content content ad"
+    "footer footer footer footer"
+}
+
+.artist{
+    transform: translate(-33%,-33%);
+}
+
+
+.navbar{
+    display: flex;
+    font-size:1.7em;
+
+
+}
+
+
+.navbar > a:hover{
+    color: #000;
+}
+
+
+#navigation { grid-area: nav; }
+#big-ad { grid-area: ad; }
+#news { grid-area: news; }
+#content { grid-area: content; }
+#footer { grid-area: footer;}
