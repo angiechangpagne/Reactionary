@@ -2,21 +2,171 @@
 
 
 
-$base-color:rgb(43, 28, 46);
+$primary-color:rgb(43, 28, 46);
 $light-base-color: lighten($primary-color,33%);
 $b-radius: 6px;
 $shadow: 6px 6px 6px 6px rgba(0,0,0,.2);
-
+$beige: rgba(248, 255, 149, 0.884);
 
 header{
-    font-family: 
+    font-family: 'Audiowide','Electrolize';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    h2:hover::after{
+        content: "-Life Imitates Art..";
+    }
+}
+
+
+h2{
+    font-family: 'Audiowide','Electrolize';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    :hover::after{
+        content: "-Life Imitates Art..";
+    }
+}
+
+
+
+body{
+    font-family: 'Audiowide', 'Electrolize';
+    background-color: lighten($light-base-color,5%);
+    color: darken($primary-color,5%);
+}
+.charContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px, 1fr));
+    grid-gap: 1em;
+    justify-items:center;
+}
+
+.charCard{
+    background-color: silver;
+    width: 280px;
+    border: 1px solid rgb(0,0,0);
+    margin: 5px;
+    border: 2px solid $light-base-color;
+    box-shadow: $shadow;
+    padding: 10px;
+    border-radius: $b-radius;
+    transition: all .3s ease-in-out;
+
+
+    &:hover{
+        transform: scale(1.6);
+    }
+}
+
+.charHeadContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary-color;
+
+    h2{
+        margin-bottom:0;
+        margin-left:10px;
+    }
+
+
+    .favIcon{
+        align-self: flex-start;
+        &:hover{
+            cursor:pointer;
+            transform:scale(1.1);
+        }
+    }
+    small{
+        margin-left:6px;
+    }
+}
+
+.charAddDetail{
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+.charFilmsList{
+    margin-top: 0;
+}
+
+.charFilm{
+    margin-left: .2rem;
+}
+
+.charDetailsList{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+
+
+    li{
+        margin:5px;
+        color: darken($light-base-color,50%);
+    }
+}
+
+.primaryButton{
+    background-color: $primary-color;
+    color: whitesmoke;
+    padding: 4px 15px;
+    border:none;
+    font-size: 13px;
+    border-radius: $b-radius;
+    margin-right: 10px;
+}
+
+.secondaryButton{
+    background-color: whitesmoke;
+    color: $primary-color;
+    padding: 4px 13px;
+    font-size:13px;
+    border: solid 1px $light-base-color;
+    border-radius: $b-radius;
+}
+
+button{
+    opacity: .66;
+    transition: opacity .3 ease-in;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+.nicknameFields{
+    margin-bottom: 13px;
+    label{
+        margin-right: 13px;
+    }
+
+    input{
+        border-radius: $b-radius;
+        border:none;
+        padding: 10px 10px;
+    }
+}
+
+
+.customCharContainer{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
 }
 
 .container{
     display: grid;
     grid-template: auto / repeat(4, 1fr);
-    border: 1px solid darken($base-color,20%);
-    text-shadow: 0 -1px 0 darken($base-color,10%);
+    border: 1px solid darken($primary-color,20%);
+    text-shadow: 0 -1px 0 darken(primary-color,10%);
     grid-template-areas:
     "nav nav nav ad"
     "news content content ad"
