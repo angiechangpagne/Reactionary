@@ -26,7 +26,7 @@ class App extends Component{
 
 
     componentDidMount(){
-
+        document.title="Angen Changpagne";
     }
     componentDidUpdate(){
         
