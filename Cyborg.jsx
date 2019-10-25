@@ -12,6 +12,8 @@ const Cyborg=(props) =>{
             my existence and the meaning of our consciousness. The idea scard me at 6, so I brushed it off and continued the human path.
             I still often times try to understand our existence and our reality, and then I realize that coding and logic is much easier to understand. 
           </p>
+
+          <p> Life Imitates Art</p>
     <img src=""> </img>
     </div>
     );
